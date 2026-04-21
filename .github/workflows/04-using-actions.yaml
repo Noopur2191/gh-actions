@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
 name: 04 - Using Actions
-on: push
+on: workflow_dispatch
 jobs:
     build:
         runs-on: ubuntu-latest
