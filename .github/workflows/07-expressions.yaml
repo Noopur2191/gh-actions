@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
 name: 07 - Using Expressions
+run-name: "07 - Using Expressions | DEBUG - ${{ inputs.debug == 'true' && 'ON' || 'OFF' }}"
+
 on: 
     push:
         branches: [main]
