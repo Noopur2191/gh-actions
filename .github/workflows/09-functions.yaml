@@ -1,9 +1,6 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: 09 - Using Functions
 on:
-    pull_request:
-        types: [opened, synchronize]
-        branches: [main]
     workflow_dispatch:
 jobs:
     echo1:
@@ -16,10 +13,6 @@ jobs:
             - name: Bug step
               if: ${{ failure() && contains(github.event.pull_request.title, 'fix') }}
               run: echo "I am a bug fix"
-            - name: Sleep for 20 seconds
-              run: sleep 20
-            - name: Failing step
-              run: exit 1
             - name: I will be skipped
               if: ${{ success() }}
               run: echo "I will print if previous steps succeed."
